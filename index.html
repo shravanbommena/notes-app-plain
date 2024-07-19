@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div id="auth-container">
+      <div id="login-form">
+        <h2>Login</h2>
+        <input
+          class="auth-input-box"
+          type="email"
+          id="login-email"
+          placeholder="Email"
+          required
+        />
+        <input
+          class="auth-input-box"
+          type="password"
+          id="login-password"
+          placeholder="Password"
+          required
+        />
+        <button class="auth-button" id="login-btn">Login</button>
+        <p>
+          Don't have an account?
+          <a href="#" id="show-register">Register here</a>
+        </p>
+      </div>
+      <div id="register-form" style="display: none">
+        <h2>Register</h2>
+        <input
+          class="auth-input-box"
+          type="text"
+          id="register-username"
+          placeholder="Username"
+          required
+        />
+        <input
+          class="auth-input-box"
+          type="email"
+          id="register-email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="password"
+          class="auth-input-box"
+          id="register-password"
+          placeholder="Password"
+          required
+        />
+        <button class="auth-button" id="register-btn">Register</button>
+        <p>
+          Already have an account? <a href="#" id="show-login">Login here</a>
+        </p>
+      </div>
+    </div>
+    <div id="notes-container" style="display: none">
+      <div class="notes-navbar">
+        <h1>Notes</h1>
+        <button id="logout-btn">Logout</button>
+      </div>
+      <div class="notes-section">
+        <div class="notes-menu-section">
+          <button id="new-note">New Note</button>
+          <input type="text" id="search" placeholder="Search notes" />
+          <button id="view-all-notes">All Notes</button>
+          <button id="view-archive">View Archived</button>
+          <button id="view-trash">View Trash</button>
+          <button id="view-reminders">View Reminders</button>
+        </div>
+        <div id="note-list">
+          <!-- Notes will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
